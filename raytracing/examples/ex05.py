@@ -13,10 +13,10 @@ def exampleCode(comments=None):
     path = ImagingPath()
     path.label = TITLE
     path.append(Space(d=4))
-    path.append(Lens(f=18.1, diameter=8, label='Obj'))
+    path.append(Lens(f=18, diameter=9, label='Obj'))
     path.append(Space(d=4 + 180))
-    path.append(Lens(f=250, diameter=25, label='Tube Lens'))
-    path.append(Space(d=180))
+    path.append(Lens(f=200, diameter=25, label='Tube Lens'))
+    path.append(Space(d=4+ 200))
     path.display(ObjectRays(diameter=1, halfAngle=0.5),comments=comments)
 
 if __name__ == "__main__":

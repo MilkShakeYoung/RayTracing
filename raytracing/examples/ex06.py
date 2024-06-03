@@ -9,7 +9,7 @@ objective. """
 from raytracing import *
 
 def exampleCode(comments=DESCRIPTION):
-    fobj, dObj, f2, d2, f3, d3 = 9, 20, 200, 50, 100, 50
+    fobj, dObj, f2, d2, f3, d3 = 18, 9, 100, 25, 50, 25
 
     path = OpticalPath()
     path.append(Space(d=f3))
@@ -22,7 +22,7 @@ def exampleCode(comments=DESCRIPTION):
     path.append(Lens(f=fobj, diameter=dObj))
     path.append(Space(d=fobj))
     path.label = TITLE
-    path.display(comments=comments)
+    path.display(ObjectRays(diameter=2, halfAngle=0.125),comments=comments)
 
 if __name__ == "__main__":
     exampleCode()
