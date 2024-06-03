@@ -4,16 +4,20 @@ default properties. Notice the aperture stop (AS) identified at the lens which
 blocks the cone of light. The second aperture, after the lens, is the Field Stop
 (FS) and limits the field of view."""
 
+
+# f1 = 30mm; f2=150mm
+
 from raytracing import *
 
 def exampleCode(comments=None):
     path = ImagingPath()
     path.label = TITLE
-    path.append(Space(d=100))
-    path.append(Lens(f=50, diameter=30))
     path.append(Space(d=30))
-    path.append(Aperture(diameter=30))
-    path.append(Space(d=170))
+    path.append(Lens(f=30, diameter=25))
+    path.append(Space(d=100))
+    path.append(Aperture(diameter=25))
+    path.append(Lens(f=150, diameter=25))
+    path.append(Space(d=150))
     path.display(comments=comments)
 
 if __name__ == "__main__":
